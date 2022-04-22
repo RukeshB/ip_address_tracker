@@ -1,0 +1,48 @@
+.search_sec{
+    background-image: url(../assets/images/pattern-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 40vh;
+    width: 100vw;
+}
+
+.contain{
+    text-align: center;
+    margin-top: 2%;
+    width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.contain h2{
+    color: white;
+    font-weight: 500;
+    margin-bottom: 5%;
+}
+
+.rounded{
+    border-radius: 20px;
+}
+
+.btn-search{
+    background-color: #2B2B2B;
+    border-radius: 10px;
+}
+
+.card-contain{
+    position: absolute;
+    width: 75vw;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 99;
+}
+
+.card-contain h3{
+    font-weight: 400;
+    font-size: small;
+    color: #969696;
+}

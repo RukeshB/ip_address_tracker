@@ -8,15 +8,14 @@
           type="text"
           class="form-control rounded"
           placeholder="eg: 8.8.8.8"
-          aria-label="eg: 8.8.8.8"
-          aria-describedby="button-addon2"
+          [(ngModel)]="ipAddress"
         />
         <button
           class="btn md-3 btn-search"
           type="button"
-          id="button-addon2"
+          (click)="getIpDetail()"
         >
-          <img src="../assets/images/icon-arrow.svg" alt="">
+          <img src="../assets/images/icon-arrow.svg" alt="" />
         </button>
       </div>
     </div>
@@ -24,30 +23,32 @@
 
   <div class="card-contain">
     <div class="card rounded">
-        <div class="card-body">
-          <div class="row">
-            <div class="col-3">
-                <h3>IP ADDRESS</h3>
-                <p>{{ipDetail?.ip}}</p>
-            </div>
-            <div class="col-3">
-                <h3>LOCATION</h3>
-                <p>{{ipDetail?.location?.country}},{{ipDetail?.location?.city}}</p>
-            </div>
-            <div class="col-3">
-                <h3>TIME ZONE</h3>
-                <p>{{ipDetail?.location?.timezone}}</p>
-            </div>
-            <div class="col-3">
-                <h3>ISP</h3>
-                <p>{{ipDetail?.isp}}</p>
-            </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-3">
+            <h3>IP ADDRESS</h3>
+            <p>{{ ipDetail?.ip }}</p>
+          </div>
+          <div class="col-md-3">
+            <h3>LOCATION</h3>
+            <p>
+              {{ ipDetail?.location?.country }},{{ ipDetail?.location?.city }}
+            </p>
+          </div>
+          <div class="col-md-3">
+            <h3>TIME ZONE</h3>
+            <p>{{ ipDetail?.location?.timezone }}</p>
+          </div>
+          <div class="col-md-3">
+            <h3>ISP</h3>
+            <p>{{ ipDetail?.isp }}</p>
           </div>
         </div>
       </div>
+    </div>
   </div>
 
   <div class="row">
-    <app-map [lat]="lat" [lng]="lng"></app-map>
+    <app-map [location]="location"></app-map>
   </div>
 </div>

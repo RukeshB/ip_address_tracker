@@ -6,6 +6,7 @@ import {
   SimpleChanges,
 } from '@angular/core';
 import * as L from 'leaflet';
+import { Location } from '../ip.service';
 
 @Component({
   selector: 'app-map',
@@ -15,15 +16,13 @@ import * as L from 'leaflet';
 export class MapComponent implements OnInit, OnChanges {
   private map;
 
-  @Input() lat: number;
-
-  @Input() lng: number;
+  @Input() location: Location;
 
   constructor() {}
 
   ngOnChanges(): void {
-    console.log(this.lat,this.lng);
-    this.renderMap(this.lat,this.lng);
+    console.log(this.location?.lat,this.location?.lng);
+    this.renderMap(this.location?.lat,this.location?.lng);
   }
 
   ngOnInit(): void {}

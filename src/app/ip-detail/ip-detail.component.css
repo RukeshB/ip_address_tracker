@@ -1,9 +1,39 @@
 h3 {
-    font-weight: 400;
-    font-size: small;
+  font-size: 0.75rem;
+  color: #969696;
+  padding-left: 5px;
+}
+
+p {
+  font-size: 1.5rem;
+  padding-left: 5px;
+}
+
+.card-body {
+  margin-top: 0.5rem;
+}
+
+.vertical_line {
+  border-right: solid #969696 0.5px;
+}
+
+@media screen and (max-width: 375px) {
+  .vertical_line {
+    border: 0;
+  }
+
+  .card-body {
+    text-align: center;
+  }
+
+  h3 {
+    padding: 0;
+    font-size: 0.65rem;
     color: #969696;
   }
-  
-p {
-    font-weight: 700;
+
+  p {
+    padding: 0;
+    font-size: 1.2rem;
   }
+}

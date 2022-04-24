@@ -1,38 +1,12 @@
-/* .search_sec {
-  background-image: url(../assets/images/pattern-bg.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: 0;
-  padding: 0;
-  height: 40vh;
-  width: 100%;
-}
-
-.contain {
-  background-color: red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.contain h2 {
-  color: white;
-  font-weight: 500;
-  margin-bottom: 5%;
-} */
-
 .card-contain {
   position: absolute;
   width: 75vw;
-  top: 30%;
+  min-width: 325px;
+  top: 200px;
   left: 50%;
-  border-radius: 1rem;
   transform: translate(-50%, 0);
   z-index: 99;
 }
-
-/* NEW CSS FROM HERE */
 
 .page-wrapper {
   position: relative;
@@ -44,7 +18,7 @@
   z-index: 1000;
   width: 100%;
   top: 0;
-  opacity: 0;
+  opacity: 0.2;
   object-fit: cover;
 }
 
@@ -55,4 +29,10 @@
   background-repeat: no-repeat;
   height: 40vh;
   padding: 1.5rem;
+}
+
+@media screen and (max-width: 375px) {
+  .card-contain {
+    top: 135px
+  }
 }

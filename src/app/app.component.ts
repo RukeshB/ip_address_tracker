@@ -58,11 +58,11 @@ export class AppComponent implements OnInit {
   }
 
   getIpDetail() {
-    this.ipDetail = this.dummy_data;
-    // this.ipService.getIpDetail(this.ipAddress).subscribe((res) => {
-    //   this.ipDetail = res;
-    //   this.location = res.location;
-    // });
+    // this.ipDetail = this.dummy_data;
+    this.ipService.getIpDetail(this.ipAddress).subscribe((res) => {
+      this.ipDetail = res;
+      this.location = res.location;
+    });
   }
   getIp(ip: string)
   {

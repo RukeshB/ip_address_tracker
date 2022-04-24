@@ -34,7 +34,7 @@ export interface Location{
 })
 export class IpService {
 
-  url = "https://geo.ipify.org/api/v2/country?apiKey=at_ZoR6le3sSyniFvDOeMHC04hHjZxh7";
+  url = "https://geo.ipify.org/api/v2/country,city?apiKey=at_kaKpcNt690Jq2VOxHzB1WFgCxY2ai";
   constructor(private http: HttpClient) { }
 
   getIpDetail(ipAddress: string = "120.89.124.133"):Observable<IpDetail>{

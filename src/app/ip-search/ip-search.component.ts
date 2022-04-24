@@ -17,6 +17,6 @@ export class IpSearchComponent implements OnInit {
 
   search(){
     this.ip.emit(this.ipAddress);
-
+    this.ipAddress = "";
   }
 }

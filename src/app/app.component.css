@@ -1,0 +1,38 @@
+.card-contain {
+  position: absolute;
+  width: 75vw;
+  min-width: 325px;
+  top: 200px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 99;
+}
+
+.page-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.page-wrapper > img {
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  top: 0;
+  opacity: 0.2;
+  object-fit: cover;
+}
+
+.ip-address {
+  background-image: url(../assets/images/pattern-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 40vh;
+  padding: 1.5rem;
+}
+
+@media screen and (max-width: 375px) {
+  .card-contain {
+    top: 135px
+  }
+}

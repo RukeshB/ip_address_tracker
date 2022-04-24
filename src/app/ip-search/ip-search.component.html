@@ -1,0 +1,14 @@
+<h2 class="ip-address__title">IP Address Tracker</h2>
+    <div class="ip-address__input-field-wrapper">
+      <div class="search-input-field">
+        <input
+          type="text"
+          class="input"
+          placeholder="Search for and IP address or domain"
+          [(ngModel)]="ipAddress"
+        />
+        <button class="btn btn-search" type="button" (click)="search()">
+          <img src="../assets/images/icon-arrow.svg" alt="" />
+        </button>
+      </div>
+    </div>

@@ -1,0 +1,50 @@
+.ip-address__title {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+  }
+  
+  .ip-address__input-field-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.3rem;
+  }
+  
+  .search-input-field {
+    width: 525px;
+    min-width: 325px;
+  }
+  
+  .search-input-field > .input {
+    font-size: 1rem;
+    padding: 0.8rem;
+    width: 90%;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+  }
+
+  .search-input-field > .btn-search {
+    margin-top: -2.5px;
+    background-color: #2b2b2b;
+    border-radius: 0;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 0.8rem;
+    width: 10%;
+  }
+
+  @media screen and (max-width: 375px) {
+    .search-input-field > .input {
+      font-size: 0.75rem;
+      padding: 0.75rem;
+    }
+
+    .search-input-field > .btn-search {
+      margin: 0;
+      padding: 0.65rem;
+    }
+
+    .ip-address__title {
+      font-size: 1.2rem;
+    }
+  }

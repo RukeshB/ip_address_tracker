@@ -7,7 +7,7 @@ import { IpDetail, IpService, Location } from './ip.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  ipAddress: string = "49.244.91.241";
+  ipAddress:string;
 
   location: Location = {
     country: '',
@@ -17,16 +17,39 @@ export class AppComponent implements OnInit {
     lng: 85.3206,
     postalCode: '',
     timezone: '',
-    geonameId: 0
-  }
+    geonameId: 0,
+  };
 
   ipDetail: IpDetail = {
     ip: '',
     location: null,
-    domain: [],
+    domains: [],
     as: null,
-    isp: ''
-  }
+    isp: '',
+  };
+
+  dummy_data: IpDetail = {
+    ip: '8.8.8.8',
+    location: {
+      country: 'US',
+      region: 'California',
+      city: 'Mountain View',
+      lat: 37.40599,
+      lng: -122.078514,
+      postalCode: '94043',
+      timezone: '-07:00',
+      geonameId: 5375481,
+    },
+    domains: [],
+    as: {
+      asn: 15169,
+      name: 'Google LLC',
+      route: '8.8.8.0/24',
+      domain: 'https://about.google/intl/en/',
+      type: 'Content',
+    },
+    isp: 'Google LLC',
+  };
 
   constructor(private ipService: IpService) {}
 
@@ -35,12 +58,16 @@ export class AppComponent implements OnInit {
   }
 
   getIpDetail() {
-    this.ipService
-      .getIpDetail(this.ipAddress)
-      .subscribe((res) => {
-        this.ipDetail = res;
-        this.location = res.location;
-        console.log(this.ipDetail);
-      });
+    this.ipDetail = this.dummy_data;
+    // this.ipService.getIpDetail(this.ipAddress).subscribe((res) => {
+    //   this.ipDetail = res;
+    //   this.location = res.location;
+    // });
+  }
+  getIp(ip: string)
+  {
+    this.ipAddress = ip;
+    this.dummy_data.ip = ip;
+    this.getIpDetail();
   }
 }

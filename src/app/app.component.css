@@ -1,52 +1,58 @@
-.search_sec{
-    background-image: url(../assets/images/pattern-bg.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-    height: 40vh;
-    width: 100vw;
+/* .search_sec {
+  background-image: url(../assets/images/pattern-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  height: 40vh;
+  width: 100%;
 }
 
-.contain{
-    text-align: center;
-    margin-top: 2%;
-    width: 400px;
-    margin-right: auto;
-    margin-left: auto;
+.contain {
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.contain h2{
-    color: white;
-    font-weight: 500;
-    margin-bottom: 5%;
+.contain h2 {
+  color: white;
+  font-weight: 500;
+  margin-bottom: 5%;
+} */
+
+.card-contain {
+  position: absolute;
+  width: 75vw;
+  top: 30%;
+  left: 50%;
+  border-radius: 1rem;
+  transform: translate(-50%, 0);
+  z-index: 99;
 }
 
-.rounded{
-    border-radius: 20px;
+/* NEW CSS FROM HERE */
+
+.page-wrapper {
+  position: relative;
+  width: 100%;
 }
 
-.btn-search{
-    background-color: #2B2B2B;
-    border-radius: 10px;
+.page-wrapper > img {
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  top: 0;
+  opacity: 0;
+  object-fit: cover;
 }
 
-.card-contain{
-    position: absolute;
-    width: 75vw;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    z-index: 99;
-}
-
-.card-contain h3{
-    font-weight: 400;
-    font-size: small;
-    color: #969696;
-}
-
-.card-contain p{
-    font-weight: 700;
+.ip-address {
+  background-image: url(../assets/images/pattern-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 40vh;
+  padding: 1.5rem;
 }

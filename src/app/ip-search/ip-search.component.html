@@ -5,10 +5,15 @@
           type="text"
           class="input"
           placeholder="Search for and IP address or domain"
+          (focus)="clearMessage()"
           [(ngModel)]="ipAddress"
         />
         <button class="btn btn-search" type="button" (click)="search()">
           <img src="assets/images/icon-arrow.svg" alt="" />
         </button>
       </div>
+    </div>
+
+    <div class="error_message" *ngIf="invalidIp">
+      <strong>Error!</strong> Invalid Ip address.
     </div>

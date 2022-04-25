@@ -34,7 +34,6 @@ export class MapComponent implements OnInit {
 
   renderMap() {
     if (this.map == undefined) {
-      console.log("called");
       this.map = L.map('map').setView(
         [this.location?.lat, this.location?.lng],
         13

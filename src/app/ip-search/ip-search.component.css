@@ -33,6 +33,11 @@
     width: 10%;
   }
 
+  .error_message{
+    text-align: center;
+    color: red;
+  }
+  
   @media screen and (max-width: 375px) {
     .search-input-field > .input {
       font-size: 0.75rem;

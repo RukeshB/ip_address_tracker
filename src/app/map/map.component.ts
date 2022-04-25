@@ -21,7 +21,7 @@ export class MapComponent implements OnInit {
   }
 
   icon = L.icon({
-    iconUrl: '../../assets/images/icon-location.svg',
+    iconUrl: 'assets/images/icon-location.svg',
     iconSize: [26, 36], // size of the icon
     iconAnchor: [13, 36], // point of the icon which will correspond to marker's location
   });
